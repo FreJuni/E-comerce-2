@@ -8,6 +8,7 @@ import { userAction } from "../store/userSlice";
 const Login = () => {
     const [validate, setValidate] = useState(false);
     const [email, setEmail] = useState(false);
+    const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -39,6 +40,7 @@ const Login = () => {
 
 
     const submitHandler = async () => {
+        setLoading(true);
         try {
             if (dataInfo.email.trim() == "" || dataInfo.password.trim() == "") {
                 setValidate(true);
@@ -70,6 +72,7 @@ const Login = () => {
                     successAlert(response);
                 }
             }
+            setLoading(false);
         } catch (error) {
             errorAlert(error);
         }
@@ -107,8 +110,8 @@ const Login = () => {
                         </div>
                     </div>
                     <div className=" pt-3">
-                        <button onClick={submitHandler} className=" max-sm:text-base bg-blue-500 text-white pt-1 pb-2 px-10 rounded-full text-lg">
-                            Sign in
+                        <button disabled={loading} onClick={submitHandler} className=" max-sm:text-base bg-blue-500 text-white pt-1 pb-2 px-10 rounded-full text-lg">
+                            {loading ? 'Loading ...' : ' Sign in'}
                         </button>
                     </div>
                     <div className=" pt-5">

@@ -74,7 +74,7 @@ const UserChangePasswordChangePage = () => {
     return (
         <>
             <Starter title={"Change Password Page"} />
-            <div className=" max-xl:py-10 grid place-items-center" >
+            <div className=" pb-16 pt-28 grid place-items-center" >
                 <div className="shadow-md w-[450px] max-sm:w-[300px] max-md:w-[400px] p-5 rounded-md ">
                     <div className="pb-4">
                         <h2 className=" text-lg text-gray-500 font-bold pb-3">Change Password</h2>

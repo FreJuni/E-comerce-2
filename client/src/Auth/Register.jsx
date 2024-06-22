@@ -9,6 +9,7 @@ const Register = () => {
     const [validate, setValidate] = useState(false);
     const [email, setEmail] = useState(false);
     const [checkPassword, setCheckPassword] = useState(false);
+    const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -42,6 +43,7 @@ const Register = () => {
 
 
     const submitHandler = async () => {
+        setLoading(true);
         try {
             if (dataInfo.name.trim() == "" || dataInfo.email.trim() == "" || dataInfo.phone.trim() == "" || dataInfo.address.trim() == "" || dataInfo.password.trim() == "" || dataInfo.confirmPassword.trim() == "") {
                 setValidate(true);
@@ -75,6 +77,7 @@ const Register = () => {
                     }
                 }
             }
+            setLoading(false);
         } catch (error) {
             errorAlert(error);
         }
@@ -134,8 +137,8 @@ const Register = () => {
                         </div>
                     </div>
                     <div className=" pt-8">
-                        <button onClick={submitHandler} className=" max-sm:text-base bg-blue-500 text-white pt-1 pb-2 px-10 rounded-full text-lg">
-                            Sign up
+                        <button disabled={loading} onClick={submitHandler} className=" max-sm:text-base bg-blue-500 text-white pt-1 pb-2 px-10 rounded-full text-lg">
+                            {loading ? "Loading ..." : " Sign up"}
                         </button>
                     </div>
                     <div className=" pt-5">
