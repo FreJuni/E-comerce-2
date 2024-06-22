@@ -34,7 +34,7 @@ const UserLayout = ({ order, nav, cart, setNav, favorite }) => {
                         setNav(0)
                         localStorage.setItem('nav', 0)
                         setShowMenu(false)
-                    }} className={`text-base text-gray-600  ${nav == 0 ? ' text-orange-500' : 'hover:text-orange-400 duration-75'} uppercase tracking-wider`} href="/user">
+                    }} className={`text-base text-gray-600  ${nav == 0 ? ' text-orange-500' : 'hover:text-orange-400 duration-75'} uppercase tracking-wider`} href="/user/home">
                         <li>HOME</li>
                     </a>
                     <a onClick={() => {

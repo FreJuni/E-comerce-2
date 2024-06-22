@@ -60,7 +60,7 @@ const Login = () => {
                     if (response.userInfo.userRole == 'superadmin' || response.userInfo.userRole == 'admin') {
                         navigate('/admin');
                     } else {
-                        navigate('/user');
+                        navigate('/user/home');
                     }
 
                     dispatch(userAction.setToken(response.token));

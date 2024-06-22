@@ -9,7 +9,7 @@ const Starter = ({ title }) => {
                     <h1 className=" max-md:text-4xl text-5xl font-light tracking-widest text-gray-800">{title.toUpperCase()}</h1>
                     <div className=" pt-3 max-md:text-lg text-xl text-gray-600">
                         {
-                            title == "Shop Detail" ? <><a onClick={() => { localStorage.setItem('nav', 2) }} href="/user/shop" className=" hover:text-orange-500 duration-200 " >Shop</a> {" > "}<span className=" underline">{title}</span></> : <> <a onClick={() => { localStorage.setItem('nav', 0) }} href="/user" className=" hover:text-orange-500 duration-200 " >Home</a> {" > "}<span className=" underline">{title}</span></>
+                            title == "Shop Detail" ? <><a onClick={() => { localStorage.setItem('nav', 2) }} href="/user/shop" className=" hover:text-orange-500 duration-200 " >Shop</a> {" > "}<span className=" underline">{title}</span></> : <> <a onClick={() => { localStorage.setItem('nav', 0) }} href="/user/home" className=" hover:text-orange-500 duration-200 " >Home</a> {" > "}<span className=" underline">{title}</span></>
                         }
                     </div>
                 </div>

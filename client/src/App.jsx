@@ -148,7 +148,7 @@ function App() {
       element: <UserLayout cart={cart} order={order} favorite={favorite} nav={nav} setNav={setNav} />,
       children: [
         {
-          path: '/user',
+          path: '/user/home',
           element: <AuthProvider>
             <UserProvider>
               <UserHome setNav={setNav} setCar={setCar} />

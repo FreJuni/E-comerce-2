@@ -66,7 +66,7 @@ const Register = () => {
                             throw new Error(response.message);
                         }
 
-                        navigate('/user');
+                        navigate('/user/home');
                         dispatch(userAction.setToken(response.token));
                         dispatch(userAction.setUser(response.userInfo));
                         localStorage.setItem('token', response.token);

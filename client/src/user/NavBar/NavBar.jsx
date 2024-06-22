@@ -33,14 +33,14 @@ const NavBar = ({ nav, order, cart, setShowMenu, setNav, favorite }) => {
                     <a onClick={() => {
                         setNav(0)
                         localStorage.setItem('nav', 0)
-                    }} href="/user"> <h1 className="max-lg:text-3xl font-bold text-4xl text-gray-600">POS<span className="text-gray-400 font-normal">LITE</span></h1></a>
+                    }} href="/user/home"> <h1 className="max-lg:text-3xl font-bold text-4xl text-gray-600">POS<span className="text-gray-400 font-normal">LITE</span></h1></a>
                 </div>
                 <div className=' max-lg:hidden'>
                     <ul className=" flex gap-3 items-center">
                         <a onClick={() => {
                             setNav(0)
                             localStorage.setItem('nav', 0)
-                        }} className={`text-lg text-gray-600  ${nav == 0 ? ' text-orange-500' : 'hover:text-orange-400 duration-75'} uppercase tracking-wider`} href="/user">
+                        }} className={`text-lg text-gray-600  ${nav == 0 ? ' text-orange-500' : 'hover:text-orange-400 duration-75'} uppercase tracking-wider`} href="/user/home">
                             <li>Home</li>
                         </a>
                         <a onClick={() => {
